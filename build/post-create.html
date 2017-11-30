@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="js/main.min.js"></script>
+    <title>Images | Create Post</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="menu">
+        <div class="container">
+          <div class="menu__items">
+            <div class="menu__item"><a class="menu__item_link" href="/feed.html">
+                      <svg class="icon icon-news menu__item_icon">
+                        <use xlink:href="images/symbol/sprite.svg#news"></use>
+                      </svg></a><a class="menu__item_link" href="/">
+                      <svg class="icon icon-user menu__item_icon">
+                        <use xlink:href="images/symbol/sprite.svg#user"></use>
+                      </svg></a><a class="menu__item_link" href="/post/create">
+                      <svg class="icon icon-pen menu__item_icon">
+                        <use xlink:href="images/symbol/sprite.svg#pen"></use>
+                      </svg></a></div>
+            <div class="menu__item"><a href="/"><img class="menu__logo" src="images/logo.png" alt="logo"></a></div>
+            <div class="menu__item"><a class="menu__item_link" href="#search__form">
+                      <svg class="icon icon-search menu__item_icon">
+                        <use xlink:href="images/symbol/sprite.svg#search"></use>
+                      </svg></a>
+              <div class="search__form" id="search__form">
+                <form method="post" action="/search">
+                  <input class="search__field" type="text">
+                  <input class="search__btn" type="submit">
+                </form>
+              </div><a class="menu__item_link menu__item_lang" href="/lang">RU</a><a class="menu__item_link menu__item_logout" href="/logout">
+                      <svg class="icon icon-lock menu__item_icon">
+                        <use xlink:href="images/symbol/sprite.svg#lock"></use>
+                      </svg><span class="menu__item_username">Jane</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="create">
+        <div class="container">
+          <div class="create__wrapper wrapper__left">
+            <form action="post-create" method="post">
+              <div class="form__field">
+                <p class="file__field__label">Select an image</p>
+                <label class="file__input">Select
+                  <input type="file">
+                </label>
+              </div>
+              <div class="form__field">
+                <label for="description"> Description</label><br>
+                <input type="text" id="description">
+              </div>
+              <button class="btn-filled btn-create" type="submit">Create</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="footer__title"><span>Images &copy; 2017</span></div>
+      </section>
+      <div class="overlay">
+        <div class="preloader">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
